@@ -35,7 +35,7 @@ class AltCommand extends Command implements PluginIdentifiableCommand{
 					foreach(Server::getInstance()->getOnlinePlayers() as $other){
 						if($other->getAddress() === $ip){
 							$players[] = $other->getName();
-							$otherip = $player->getAddress();
+							$otherip = $other->getAddress();
 							$all = count($players);
 							$sender->sendMessage(TextFormat::BOLD . TextFormat::GREEN . $number . TextFormat::WHITE . " player(s) are playing on the IP " . $ip . "! Names: " . TextFormat::YELLOW . implode(", ", $players));
 						}
@@ -54,7 +54,7 @@ class AltCommand extends Command implements PluginIdentifiableCommand{
 					foreach($sender->getServer()->getOnlinePlayers() as $other){
 						if($other->getAddress() === $ip){
 							$players[] = $other->getName();
-							$otherip = $player->getAddress();
+							$otherip = $other->getAddress();
 							$all = count($players);
 							Server::getInstance()->getLogger()->info(TextFormat::BOLD . TextFormat::GREEN . $number . TextFormat::WHITE . " player(s) are playing on the IP " . $ip . "! Names: " . TextFormat::YELLOW . implode(", ", $players));
 						}
