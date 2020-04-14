@@ -1,0 +1,6 @@
+---
+name: AltFinder
+version: 1.0
+main: ethaniccc\AltFinder\Main
+api: 3.11.6
+...
